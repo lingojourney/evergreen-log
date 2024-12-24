@@ -18,6 +18,14 @@ I’m pursuing a PhD in Computational Psychology as a **side hobby** and have ma
 💼 **Work (Corporate):**  
 At my full-time job in fintech at a UK bank HQ, my focus on FR-OAR has had a huge impact. I’ve spent more time organizing and planning rather than blindly doing tasks, leading to skyrocketing productivity. I have also developed much more discipline in using Spaced Repetition, Active Recall and Memory Palaces to learn highly complex systems more effectively. This push is helping me accelerate towards financial independence, which feels more within reach! 💸💼
 
+💼 **Work (Psychotherapy):**  
+- started fourth and final year of my BACP-approved psychotherapy training 
+- starting volunteering at Mind South East London 
+- did training at Hoarding UK for eventual volunteering with them in 2025/2026
+
+💼 **Work (Entrepreneurial):**  
+- helping a dear friend of mine to prepare the launch of fithub360.com 
+
 🌐 **Connection (Friendship & Family):**
 
 - **Friendship**: I attended a London Meetup organised by Celine on Day 07 and made wonderful connections. I even discovered another alchemist who lives within a 30-minute brisk walk from my house! I met another alchemist (Hannah) on Day 16. I co-worked in person with another alchemist (Jonathan) and attended another in-person event in November. I organised a joyful Christmas dinner and three other alchemists turned up. I also think I have fostered two friendship in the NVC circle.
@@ -36,5 +44,18 @@ In just **91 days**, the transformation has been incredible. I’m excited to se
 
 🎉 **Highest:**  
 - My Kenyan venture 
+
+🎉 **Extras for whole year**  
+- March 
+	- Trip to Germany 
+- April
+	- Trip to Sichuan 
+- May
+	- Trip to Serbia
+- .
+- Q4: inspired by
+	- Matthew Dicks
+	- Austin Kleon
+	- 
 
 🙏 **Gratitude** to Ali, his team, and my fellow alchemists for all the support. Onwards to a more wonderful life! 😇
