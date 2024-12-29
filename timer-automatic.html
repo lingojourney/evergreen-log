@@ -3,12 +3,13 @@ layout: default
 title: Timer (Automatic)
 permalink: /timer-automatic/
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Pomodoro Timer</title>
+    <title>Joyful Pomodoro Timer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,41 +35,31 @@ permalink: /timer-automatic/
             font-size: 1.5rem;
             margin-bottom: 20px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            background-color: #4caf50;
-            color: white;
-            cursor: pointer;
-        }
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
     </style>
 </head>
 <body>
     <div class="timer-container">
         <h1>Joyful Pomodoro Timer</h1>
         <div class="timer" id="timer">05:00</div>
-        <div class="status" id="status">[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.</div>
-        <button id="startBtn">Start Timer</button>
+        <div class="status" id="status">[Align] Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve in the next 60 minutes.</div>
     </div>
 
     <script>
         const timerElement = document.getElementById('timer');
         const statusElement = document.getElementById('status');
-        const startButton = document.getElementById('startBtn');
 
-        let durations = [5 * 60, 50 * 60, 5 * 60]; // Alignment, Focus, Reflection in seconds
-        let statusMessages = ["[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.", "Focus: Work on your tasks!", "Reflection: Recharge and plan!"];
+        const durations = [5 * 60, 50 * 60, 5 * 60]; // Alignment, Focus, Reflection in seconds
+        const statusMessages = [
+            "[Align] Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve in the next 60 minutes.",
+            "Focus: Work on your tasks!",
+            "Reflection: Recharge and plan!"
+        ];
+
         let currentPhase = 0;
         let interval;
 
-        function startTimer(duration, callback) {
-            let time = duration;
+        function startTimer(duration, remainingTime, callback) {
+            let time = remainingTime !== undefined ? remainingTime : duration;
             interval = setInterval(() => {
                 const minutes = Math.floor(time / 60).toString().padStart(2, '0');
                 const seconds = (time % 60).toString().padStart(2, '0');
@@ -85,7 +76,7 @@ permalink: /timer-automatic/
         function startNextPhase() {
             if (currentPhase < durations.length) {
                 statusElement.textContent = statusMessages[currentPhase];
-                startTimer(durations[currentPhase], () => {
+                startTimer(durations[currentPhase], undefined, () => {
                     currentPhase++;
                     startNextPhase();
                 });
@@ -98,10 +89,37 @@ permalink: /timer-automatic/
             }
         }
 
-        startButton.addEventListener('click', () => {
-            startButton.disabled = true;
-            startNextPhase();
-        });
+        function calculateCurrentPhase() {
+            const now = new Date();
+            const secondsSinceHour = now.getUTCMinutes() * 60 + now.getUTCSeconds();
+            let accumulatedTime = 0;
+
+            for (let i = 0; i < durations.length; i++) {
+                accumulatedTime += durations[i];
+                if (secondsSinceHour < accumulatedTime) {
+                    const remainingTime = accumulatedTime - secondsSinceHour;
+                    currentPhase = i;
+                    return remainingTime;
+                }
+            }
+
+            // If the hour has passed, restart the cycle
+            currentPhase = 0;
+            return durations[0];
+        }
+
+        // Initialize the timer
+        function initializeTimer() {
+            const remainingTime = calculateCurrentPhase();
+            statusElement.textContent = statusMessages[currentPhase];
+            startTimer(durations[currentPhase], remainingTime, () => {
+                currentPhase++;
+                startNextPhase();
+            });
+        }
+
+        // Start the timer immediately
+        initializeTimer();
     </script>
 </body>
 </html>
