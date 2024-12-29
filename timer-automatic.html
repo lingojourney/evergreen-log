@@ -3,7 +3,6 @@ layout: default
 title: Timer (Automatic)
 permalink: /timer-automatic/
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,13 +34,75 @@ permalink: /timer-automatic/
             font-size: 1.5rem;
             margin-bottom: 20px;
         }
+        .intention {
+            margin: 20px 0;
+        }
+        .intention input {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .collapsible {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1rem;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 10px;
+            display: none;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="timer-container">
         <h1>Joyful Pomodoro Timer</h1>
+
+        <div class="intention">
+            <label for="intentionInput">Set your focus intention:</label><br>
+            <input type="text" id="intentionInput" placeholder="Type your intention here...">
+        </div>
+
         <div class="timer" id="timer">05:00</div>
         <div class="status" id="status">[Align] Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve in the next 60 minutes.</div>
+    </div>
+
+    <button class="collapsible">Documentation for New Users</button>
+    <div class="content">
+        <p><strong>Welcome to the Joyful Pomodoro Timer!</strong></p>
+        <p>This timer is designed to help you align, focus, and reflect on your tasks every hour. Here’s how it works:</p>
+        <ul>
+            <li><strong>Alignment (5 minutes):</strong> Use this time to set your intention and align with your goals for the next hour.</li>
+            <li><strong>Focus (50 minutes):</strong> Work on your tasks without distractions.</li>
+            <li><strong>Reflection (5 minutes):</strong> Recharge and plan for your next session.</li>
+        </ul>
+        <p>Simply type your intention in the box above and let the timer guide you through the phases. The timer automatically starts at the top of the hour and syncs with GMT.</p>
+        <p>For any feedback or questions, feel free to contact us. Happy focusing!</p>
     </div>
 
     <script>
@@ -120,6 +181,14 @@ permalink: /timer-automatic/
 
         // Start the timer immediately
         initializeTimer();
+
+        // Collapsible Documentation
+        const collapsible = document.querySelector('.collapsible');
+        const content = document.querySelector('.content');
+
+        collapsible.addEventListener('click', () => {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
     </script>
 </body>
 </html>
