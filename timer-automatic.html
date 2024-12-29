@@ -1,0 +1,107 @@
+---
+layout: default
+title: Timer (Automatic)
+permalink: /timer-automatic/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Pomodoro Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .timer-container {
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .timer {
+            font-size: 5rem;
+            margin: 20px 0;
+        }
+        .status {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Joyful Pomodoro Timer</h1>
+        <div class="timer" id="timer">03:00</div>
+        <div class="status" id="status">[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.</div>
+        <button id="startBtn">Start Timer</button>
+    </div>
+
+    <script>
+        const timerElement = document.getElementById('timer');
+        const statusElement = document.getElementById('status');
+        const startButton = document.getElementById('startBtn');
+
+        let durations = [3 * 60, 50 * 60, 7 * 60]; // Preparation, Focus, Reflection in seconds
+        let statusMessages = ["[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.", "Reflection: Recharge and plan!"];
+        let currentPhase = 0;
+        let interval;
+
+        function startTimer(duration, callback) {
+            let time = duration;
+            interval = setInterval(() => {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerElement.textContent = `${minutes}:${seconds}`;
+                time--;
+
+                if (time < 0) {
+                    clearInterval(interval);
+                    callback();
+                }
+            }, 1000);
+        }
+
+        function startNextPhase() {
+            if (currentPhase < durations.length) {
+                statusElement.textContent = statusMessages[currentPhase];
+                startTimer(durations[currentPhase], () => {
+                    currentPhase++;
+                    startNextPhase();
+                });
+            } else {
+                currentPhase = 0; // Reset for next hour
+                statusElement.textContent = "Cycle complete! Starting again.";
+                setTimeout(() => {
+                    startNextPhase();
+                }, 1000);
+            }
+        }
+
+        startButton.addEventListener('click', () => {
+            startButton.disabled = true;
+            startNextPhase();
+        });
+    </script>
+</body>
+</html>
