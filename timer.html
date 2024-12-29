@@ -51,9 +51,9 @@ permalink: /timer/
 </head>
 <body>
     <div class="timer-container">
-        <h1>Super Pomodoro Timer</h1>
+        <h1>Joyful Pomodoro Timer</h1>
         <div class="timer" id="timer">03:00</div>
-        <div class="status" id="status">Preparation: Get ready!</div>
+        <div class="status" id="status">[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.</div>
         <button id="startBtn">Start Timer</button>
     </div>
 
@@ -63,7 +63,7 @@ permalink: /timer/
         const startButton = document.getElementById('startBtn');
 
         let durations = [3 * 60, 50 * 60, 7 * 60]; // Preparation, Focus, Reflection in seconds
-        let statusMessages = ["Preparation: Get ready!", "Focus: Stay on task!", "Reflection: Recharge and plan!"];
+        let statusMessages = ["[Align]  Align with your weekly/quarterly Goals. Write down in your hourly log what you plan to achieve next 60 minutes.", "Reflection: Recharge and plan!"];
         let currentPhase = 0;
         let interval;
 
