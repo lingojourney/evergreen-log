@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Annual Review for 2024
-date: 2024-12-22 08:58:00 +0000
-categories: daily
+date: 2025-01-06 08:58:00 +0000
+categories:
+  - daily
 ---
 # Quarterly/Annual Goal Check-in
 
