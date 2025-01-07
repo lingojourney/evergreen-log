@@ -4,10 +4,9 @@ title: Annual Review for 2024
 date: 2024-12-22 08:58:00 +0000
 categories: daily
 ---
-
 # Quarterly/Annual Goal Check-in
 
-I joined the productivity lab on 2024-09-21, so today (2024-12-22) marks **Day 91** of my transformation journey, and I’d like to celebrate in **three key areas of life** that have seen the most growth:
+I joined the productivity lab on 2024-09-21, so today (2024-01-06) marks **Day 108** of my transformation journey, and I’d like to celebrate in **three key areas of life** that have seen the most growth:
 
 💪 **Health:**  
 After a decade, I finally hired a personal trainer and have consistently had an average **3 daily sessions** at 07:30 am (UK time). I’ve done my research and bought a high-quality treadmill/walking desk for my living room around Black Friday. Along with tracking my diet more regularly on MyFitnessPal, I’ve been sneaking in yoga poses and Wing Chun punches during conference calls when I can turn off my camera! 🧘‍♂️🥋
@@ -40,22 +39,22 @@ I hired a very affordable meditation teacher to make my practice easier and more
 - I prepared for Japanese N2 exam and took it on 1st December; I'm confident that I have passed. I aspire to pass N1 in 2026 if not 2025. 😉
 - I had an amazing trip with my wife to Budapest, Madrid, Cadiz 
 
-In just **91 days**, the transformation has been incredible. I’m excited to see how far I can go by day 180, 365… 🌟
+In just **108 days**, the transformation has been incredible. I’m excited to see how far I can go by day 180, 365… 🌟
 
 🎉 **Highest:**  
-- My Kenyan venture 
+(http://endperiodpovertynow.com)
+(https://gofund.me/abc1a145)
 
-🎉 **Extras for whole year**  
-- March 
-	- Trip to Germany 
-- April
-	- Trip to Sichuan 
-- May
-	- Trip to Serbia
-- .
-- Q4: inspired by
-	- Matthew Dicks
-	- Austin Kleon
-	- 
+In the past few months, I’ve made significant strides toward empowering a couple of communities around Lake Victoria in Kenya through a project close to my heart. This initiative focuses on three transformative pillars:
+
+1. **Education**:
+    - I’m supporting the completion of the NVC School Rusinga, with only ~$9,000 USD remaining to fund the roof. This school is designed to empower young minds through a curriculum rooted in empathy and Nonviolent Communication (NVC).
+    - Additionally, I’m establishing a parallel program to introduce NVC training in surrounding schools, creating ripple effects in fostering connection and understanding.
+2. **Menstrual Health and Dignity**:
+    - My team is planning a program offering menstrual cups and sanitary pads to selected schoolgirls, providing not just physical resources but also holistic family and community support. This initiative ensures these young women can pursue their education uninterrupted, with dignity and confidence.
+3. **Community Resilience**:
+    - With my partners, I’ve worked on building family and community networks that prioritise emotional well-being and sustainable growth. This includes workshops and dialogues that deepen the impact of NVC and align with the region's cultural context.
+
+I’m grateful for the profound lessons learned, the connections formed, and the small yet significant steps toward building a resilient and compassionate community. I envision this venture as a cornerstone of a broader mission to empower underprivileged groups globally. 🌍
 
 🙏 **Gratitude** to Ali, his team, and my fellow alchemists for all the support. Onwards to a more wonderful life! 😇
